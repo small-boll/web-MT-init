@@ -1,0 +1,263 @@
+/** 全局公共样式  **///
+//针对本系统定制的样式，根据系统需要写入
+
+@charset "utf-8";
+/* CSS Document */
+
+html,
+body {
+  height:100%;
+  min-height: 600px;
+  min-width: 1100px;
+  overflow: auto;
+}
+
+#app {
+  height: 100%;
+}
+
+.home {
+  height: 100%;
+}
+
+//************************* 自定义公共组件样式
+//文字颜色
+.font-red {
+  color: red !important;
+}
+.font-success {
+  color: #67C23A !important;
+}
+.font-danger {
+  color: #F56C6C !important;
+}
+
+
+.font-light-red {
+  color: #ff7c7c !important;
+}
+.font-light-green {
+  color: #7fff7c !important;
+}
+.font-blue {
+  color: #409EFF;
+}
+
+
+.hoverSpan {
+  color: #6a85f1;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+//无数据时列表样式
+
+.common-noData {
+  text-align: center;
+  line-height: 200px;
+}
+
+//y轴滚动条样式覆盖
+.common-scroll-y {
+  height: 100% !important;
+  width: 100%;
+
+  .el-scrollbar__wrap {
+      overflow-x: hidden;
+      overflow-y: scroll !important;
+  }
+
+  .el-scrollbar__bar{
+    &.is-horizontal {
+      display: none;
+    } 
+  } 
+}
+
+
+//x轴滚动条样式覆盖
+.common-scroll-x {
+  width: 100% !important;
+
+  .el-scrollbar__wrap {
+      overflow-y: hidden;
+      overflow-x: scroll !important;
+  }
+
+  .el-scrollbar__bar{
+    &.is-vertical {
+      display: none;
+    } 
+  } 
+}
+
+
+// 内发光btn
+.el-button.el-button--default.show-btn:not(.is-disabled) {
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: 0 0 10px rgba(#50d8ff, 1) inset !important;
+  border-radius: 5px !important;
+}
+
+.el-button.el-button--default.shadow-inset-btn:not(.is-disabled) {
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: 0 0 10px rgba(#50d8ff, 1) inset !important;
+  border-radius: 5px !important;
+}
+
+//************************* 自定义公共组件样式
+
+.el-loading-mask {
+  background-color: rgba(#fff, 0.2);
+}
+
+//@
+.page-empty {
+  width: 100%;
+  line-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a85f1;
+}
+
+// 地图无交互页面--列表页面通用样式
+section.table-page-section {
+  width: 100%;
+
+  .table-page-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+
+    .search-block {
+      min-height: 50px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 1px  dashed #e5e5e5;
+
+
+      .search-form {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .search-item.btns {
+          margin-bottom: 10px ;
+          margin-left: 30px;
+          .el-form-item__content {
+            margin-left: 0 !important;
+          }
+        }
+        .form-item-wrapper {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .search-item {
+            margin-bottom: 10px ;
+          }
+
+        }
+        
+      }
+    }
+
+    .btns-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 10px 0;
+
+    }
+
+    .content-block {
+      display: flex;
+    }
+
+    .table-block {
+      min-height: 200px;
+      flex: 1;
+    }
+
+    .table-pagination {
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+
+
+//弹框详情info样式
+
+.common-dialog {
+
+  .popup-info-block {
+    border-bottom: 1px solid #d8ddf3;
+    padding: 10px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .popup-info-head {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      background: url('~@/assets/images/common/dialog_icon_16x16.png') left center no-repeat;
+      background-size: 16px 16px;
+      padding-left: 25px;
+
+      h3 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #171c30;
+      }
+
+    }
+
+    .popup-info-body {
+      .info-content {
+        font-size: 18px;
+        color: #888;
+        line-height: 24px;
+      }
+    }
+
+  }
+}
+
+
+
+//iconfont图标
+[class^="icon-"]{
+	font-family: "iconfont" !important;
+	/* 以下内容参照第三方图标库本身的规则 */
+	font-size: 18px !important;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.el-menu-item [class^=icon-] {
+    margin-right: 5px;
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle;
+}
+.el-submenu [class^=icon-] {
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+}

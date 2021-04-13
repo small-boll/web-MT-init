@@ -1,0 +1,18 @@
+// 样式总入口
+
+
+@charset "utf-8";
+
+
+
+//全局reset
+@import "./base.scss";
+
+
+//公共样式
+@import "./common.scss";
+
+
+//主题样式
+@import "./theme/index.scss";
+

@@ -1,0 +1,25 @@
+@import './elemeny-theme/lightTheme.scss';
+
+//【默认主题】
+
+//主题包括两部分，
+// 1、皮肤（头部，侧栏,背景色等，需要自己写）
+// 2、组件(element-ui组件，可通过MTColor组件改变颜色值)
+
+
+body {
+
+    //默认颜色
+    $primaryColor: #409EFF; //主色
+
+    
+
+    //颜色比较网站: http://scg.ar-ch.org/
+
+    &.theme-default {
+
+
+
+    }
+
+}

@@ -1,0 +1,177 @@
+.template-login {
+  height: 100%;
+  background-size: cover;
+  position: relative !important;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .login-form-section {
+    width: 650px;
+    height: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-55%);
+
+    .login-form-wrapper {
+      .login-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 4px;
+        position: relative;
+
+        .logo-img {
+          display: block;
+          width: 80px;
+          margin-right: 30px;
+          margin-bottom: 50px;
+        }
+
+        em {
+          font-size: 36px;
+          font-weight: bold;
+          margin-right: 10px;
+          letter-spacing: 0px;
+        }
+
+        .btn-lang {
+          position: absolute;
+          top: 90px;
+          right: -10px;
+          cursor: pointer;
+        } 
+      }
+
+      .login-form {
+        margin: 0 125px;
+
+        .el-form-item {
+          margin-bottom: 10px;
+        }
+
+        .el-input__inner {
+          background: transparent !important;
+          border: none !important;
+          border-bottom: 1px solid rgba(#fff, 0.4) !important;
+          color: #fff !important;
+          height: 48px !important;
+          border-radius: 0;
+          padding-left: 60px;
+          font-size: 16px;
+
+          &:hover {
+            box-shadow: none !important;
+            border-bottom: 1px solid rgba(#fff, 1) !important;
+          }
+        }
+
+        .el-input__icon {
+          font-size: 28px;
+          width: 50px;
+          line-height: 48px;
+          color: rgba(#fff , .5);
+        }
+
+        .code-input {
+          align-items: center;
+          position: relative;
+          margin-bottom: 0;
+
+          .el-input__inner {
+            width: calc(100% - 120px);
+          }
+
+          .login-code {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: rgba(#fff, 0.9);
+            width: 100px;
+            height: 48px;
+            border-radius: 24px;
+            overflow: hidden;
+
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .row-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 60px;
+          padding: 0 10px;
+          margin-bottom: 10px;
+
+          .el-checkbox {
+            margin: 0 !important;
+            .el-checkbox__label {
+              color: rgba(#fff, 0.85);
+            }
+          }
+
+          .register-btn {
+            color: rgba(#fff, 0.85);
+            font-size: 14px;
+            cursor: pointer;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          
+        }
+
+        .submit-btn {
+          height: 48px !important;
+          border-radius: 24px;
+
+          span {
+            font-size: 18px;
+            letter-spacing: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .login-bottom {
+    width: 100%;
+    height: 50px;
+
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 12px;
+
+    & > div {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        margin: 0 5px;
+        font-size: 12px;
+      }
+    }
+  }
+}
