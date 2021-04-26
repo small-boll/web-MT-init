@@ -1,0 +1,28 @@
+.triangle-template {
+  width: 100%;
+  height: 100%;
+  .conatin {
+    width: 100px;
+    height: 200px;
+    display: inline-block;
+    margin: 30px;
+    .triangle1 {
+      border-top: 50px solid yellowgreen;
+      border-left: 50px solid gold;
+      border-bottom: 50px solid burlywood;
+      border-right: 50px solid cadetblue;
+    }
+    .triangle2 {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(
+        45deg,
+        deeppink,
+        deeppink 50%,
+        yellowgreen 50%,
+        yellowgreen 100%
+      );
+      transform: rotate(45deg);//通过旋转角度得到不同朝向的三角形
+    }
+  }
+}

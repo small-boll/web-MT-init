@@ -26,6 +26,13 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/pages/LoginAnimation.vue"], resolve),
     },
+    {
+      path: "/Triangle",
+      name: "Triangle",
+      meta: { title: "Triangle" },
+      component: (resolve: any) =>
+        require(["@/pages/Triangle.vue"], resolve),
+    },
   ],
 });
 
