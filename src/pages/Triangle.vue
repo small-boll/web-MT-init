@@ -10,7 +10,10 @@
           <p>linear-gradient 绘制（线性渐变）</p>
           <div class="triangle2"></div>
       </div>
-      <div class="conatin"></div>
+      <div class="conatin">
+          <p>linear-gradient 绘制（角向渐变）</p>
+          <div class="triangle3"></div>
+      </div>
   </div>
 </template>
 
