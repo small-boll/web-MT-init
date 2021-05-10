@@ -33,6 +33,27 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/pages/Triangle.vue"], resolve),
     },
+    {
+      path: "/StudyTable",
+      name: "StudyTable",
+      meta: { title: "StudyTable" },
+      component: (resolve: any) =>
+        require(["@/pages/StudyTable.vue"], resolve),
+    },
+    {
+      path: "/GoStudy1",
+      name: "GoStudy1",
+      meta: { title: "GoStudy1" },
+      component: (resolve: any) =>
+        require(["@/components/gojs/GoStudy1.vue"], resolve),
+    },
+    {
+      path: "/MyCKEdit",
+      name: "MyCKEdit",
+      meta: { title: "MyCKEdit" },
+      component: (resolve: any) =>
+        require(["@/components/edit/MyCKEdit.vue"], resolve),
+    },
   ],
 });
 

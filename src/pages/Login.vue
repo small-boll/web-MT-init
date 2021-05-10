@@ -176,7 +176,7 @@ import { loginService } from "@/bll/sysManage/loginService";
 
 @Component({
   components: {
-    MTLangSelect,
+    MTLangSelect
   },
   computed: {
     loginRules() {
@@ -185,26 +185,26 @@ import { loginService } from "@/bll/sysManage/loginService";
           {
             required: true,
             trigger: "blur",
-            message: this.$t("login.tenantId"),
-          },
+            message: this.$t("login.tenantId")
+          }
         ],
         username: [
           {
             required: true,
             trigger: "blur",
-            message: this.$t("login.username"),
-          },
+            message: this.$t("login.username")
+          }
         ],
         password: [
           {
             required: true,
             trigger: "blur",
-            message: this.$t("login.password"),
-          },
+            message: this.$t("login.password")
+          }
         ],
         code: [
-          { required: true, trigger: "change", message: this.$t("login.code") },
-        ],
+          { required: true, trigger: "change", message: this.$t("login.code") }
+        ]
       };
     },
 
@@ -248,26 +248,26 @@ import { loginService } from "@/bll/sysManage/loginService";
           {
             required: true,
             trigger: "blur",
-            message: this.$t("register.rulesName"),
-          },
+            message: this.$t("register.rulesName")
+          }
         ],
         loginName: [
           {
             required: true,
             trigger: "blur",
-            message: this.$t("register.rulesLoginName"),
-          },
+            message: this.$t("register.rulesLoginName")
+          }
         ],
         email: [{ required: true, trigger: "blur", validator: validateEmail }],
         password: [
-          { required: true, trigger: "blur", validator: validatePass },
+          { required: true, trigger: "blur", validator: validatePass }
         ],
         checkPassword: [
-          { required: true, trigger: "blur", validator: validateCheckPass },
-        ],
+          { required: true, trigger: "blur", validator: validateCheckPass }
+        ]
       };
-    },
-  },
+    }
+  }
 })
 export default class Login extends Vue {
   @Action("setTokenAction") setTokenActionCommand!: any;
@@ -287,7 +287,7 @@ export default class Login extends Vue {
     loginName: "",
     email: "",
     password: "",
-    checkPassword: "",
+    checkPassword: ""
   };
 
   /**
@@ -335,37 +335,39 @@ export default class Login extends Vue {
     });
   }
 
-  private async login() {
+  private  login() {
     this.loginUiModel.key = this.loginUiModel.code;
     let param: any = this.loginUiModel;
 
     param.loadingTarget = "body";
 
-    let bll = new loginService();
-    let data = await bll.login(param);
-    if (data.code == 200 && data.success) {
-      //保存token值
-      if (!!data.data && !!data.data.accessToken) {
-        this.setTokenActionCommand(data.data.accessToken);
-        // 保存到sessionStorage中
-        sessionStorage.setItem("token", data.data.accessToken);
-      }
+    // let bll = new loginService();
+    // let data = await bll.login(param);
+    // if (data.code == 200 && data.success) {
+    //   //保存token值
+    //   if (!!data.data && !!data.data.accessToken) {
+    //     this.setTokenActionCommand(data.data.accessToken);
+    //     // 保存到sessionStorage中
+    //     sessionStorage.setItem("token", data.data.accessToken);
+    //   }
 
-      data = await bll.getAuthInfo(param.username);
+    //   data = await bll.getAuthInfo(param.username);
 
-      //存储用户信息
-      const userinfo = data.data;
-      this.setUserinfoActionCommand(userinfo);
-      // 保存到sessionStorage中
-      sessionStorage.setItem("userinfo", JSON.stringify(userinfo));
+    //   //存储用户信息
+    //   const userinfo = data.data;
+    //   this.setUserinfoActionCommand(userinfo);
+    //   // 保存到sessionStorage中
+    //   sessionStorage.setItem("userinfo", JSON.stringify(userinfo));
 
-      //存储用户菜单信息
-      this.getCurrentPermissionMenu(userinfo.menus);
-      this.setDictList();
-    } else {
-      this.$message.error(data.message);
-      // this.getCaptcha();
-    }
+    //   //存储用户菜单信息
+    //   this.getCurrentPermissionMenu(userinfo.menus);
+    //   this.setDictList();
+    // } else {
+    //   this.$message.error(data.message);
+    //   // this.getCaptcha();
+    // }
+
+    this.$router.push({ path: "/StudyTable" });
   }
 
   /**
@@ -377,7 +379,7 @@ export default class Login extends Vue {
       loginName: "",
       email: "",
       password: "",
-      checkPassword: "",
+      checkPassword: ""
     };
     this.$nextTick(() => {
       this.clearValidate();
@@ -389,7 +391,7 @@ export default class Login extends Vue {
    */
   private handleClick_registerSubmit() {
     console.log("this.registerForm", this.registerForm);
-    (this.$refs["registerFromRef"] as any).validate((valid) => {
+    (this.$refs["registerFromRef"] as any).validate(valid => {
       if (valid) {
         this.registerEvent(this.registerForm, () => {
           this.$message.success("注册成功");
@@ -463,7 +465,7 @@ export default class Login extends Vue {
 
     // 跳转到导航页面
     this.$router.push({
-      path: "/layout",
+      path: "/layout"
     });
   }
 
