@@ -54,6 +54,14 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/edit/MyCKEdit.vue"], resolve),
     },
+    {
+      path: "/GridLayout",
+      name: "GridLayout",
+      meta: { title: "GridLayout" },
+      component: (resolve: any) =>
+        require(["@/components/gridLayout/GridLayout.vue"], resolve),
+    },
+    
   ],
 });
 
