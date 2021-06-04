@@ -61,6 +61,13 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/gridLayout/GridLayout.vue"], resolve),
     },
+    {
+      path: "/CssStep",
+      name: "CssStep",
+      meta: { title: "CssStep" },
+      component: (resolve: any) =>
+        require(["@/components/cssStep/CssStep.vue"], resolve),
+    },
     
   ],
 });

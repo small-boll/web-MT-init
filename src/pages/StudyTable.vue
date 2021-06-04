@@ -3,6 +3,7 @@
     <el-button @click="goStudy('/GoStudy1')">查看gojs第一课</el-button>
     <el-button @click="goStudy('/MyCKEdit')">查看富文本第一课</el-button>
     <el-button @click="goStudy('/GridLayout')">查看3D动画</el-button>
+    <el-button @click="goStudy('/CssStep')">css步骤条</el-button>
     <router-view></router-view>
   </div>
 </template>
