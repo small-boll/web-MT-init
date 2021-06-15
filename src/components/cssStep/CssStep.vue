@@ -95,7 +95,7 @@ export default class CssStep extends Vue {
         summary: "购买火车票天门南 开往 汉口 03车厢",
         time: "2019-10-30 14:33:21",
         reslut: "布控过程中了解到，会跟其他吸毒人员碰头，暂缓抓捕行动",
-        type: "a",
+        type: "b",
       },
       {
         id: 3,
@@ -109,7 +109,7 @@ export default class CssStep extends Vue {
         summary: "住宿 徐东 某某小区 某某地址中",
         time: "2019-10-31 21:00:00",
         reslut: "",
-        type: "b",
+        type: "a",
       },
       {
         id: 5,
@@ -123,7 +123,7 @@ export default class CssStep extends Vue {
         summary: "收网抓捕",
         time: "2019-10-31 23:40:11",
         reslut: "犯罪团伙一网打尽，抓获贩毒人员3名",
-        type: "a",
+        type: "b",
       },
     ];
   }
@@ -184,7 +184,7 @@ export default class CssStep extends Vue {
       display: flex;
       // background-color: #83be61;
       &.active-step-item {
-        // background-color: rgb(205, 224, 224);
+        background-color: rgb(205, 224, 224);
         // &:nth-of-type(1){
         //   background-color: red;
         // }
@@ -197,21 +197,24 @@ export default class CssStep extends Vue {
         // &:nth-of-type(4){
         //   background-color: blue;
         // }
-        // .step-style-contain {
-        //   position: relative;
-        //   z-index: 1;
-        //   .dashed-contain {
-        //     position: absolute;
-        //     top: 7px;
-        //     left: 0;
-        //     height: 100%;
-        //     width: 100%;
-        //     background: #f7b500;
-        //     .deshed {
-        //       background-color: #f7b500;
-        //     }
-        //   }
-        // }
+         &:nth-of-type(1){
+          background-color: red;
+        }
+        .step-style-contain {
+          position: relative;
+          z-index: 1;
+          .dashed-contain {
+            position: absolute;
+            top: 7px;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: #f7b500;
+            .deshed {
+              background-color: #f7b500;
+            }
+          }
+        }
       }
 
       .step-style-contain {
@@ -263,18 +266,18 @@ export default class CssStep extends Vue {
     }
     .active-step-item {
       // background-color: rgb(205, 224, 224);
-      &:nth-of-type(1) {
-        background-color: rgb(253, 186, 190);
-      }
-      &:nth-of-type(2) {
-        background-color: rgb(238, 206, 147);
-      }
-      &:nth-of-type(3) {
-        background-color: rgb(160, 238, 202);
-      }
-      &:nth-of-type(4) {
-        background-color: rgb(151, 151, 231);
-      }
+      // &:nth-of-type(1) {
+      //   background-color: rgb(253, 186, 190);
+      // }
+      // &:nth-of-type(2) {
+      //   background-color: rgb(238, 206, 147);
+      // }
+      // &:nth-of-type(3) {
+      //   background-color: rgb(160, 238, 202);
+      // }
+      // &:nth-of-type(4) {
+      //   background-color: rgb(151, 151, 231);
+      // }
       //会发现并不是具有active-step-item类名的前四项的背景颜色按照以上赋予的颜色 显示，
       //原因：其所有兄弟元素都是使用同一个标签 .a:nth-of-type(1) 就可能不是 具类名是a的元素的第一个，
       //实际上是.a同类标签的第一个 这是个巨坑，目前最好的解决办法是 将你想选择的标签元素 和不想选择的标签元素 不使用同一个标签

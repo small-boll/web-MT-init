@@ -58,7 +58,26 @@ export default class GridLayout extends Vue {
     //grid-template-rows:[r1] 100px [r2] 100px [r3] auto [r4];
     //3行x3列 故有四根垂直网格线和四根水平网格线，方括号中依次是这八根线的名字，网格布局允许一根线有多个名字 如[fifth-line row-5]
    
-    //grid-row-gap属性设置行间距，grid-columns-gap属性设置列间距
+    //grid-row-gap属性设置行间距，grid-columns-gap属性设置列间距 
+    //grid-gap 是两者合并简写形式 grid-gap:<grid-row-gap> <grid-columns-gap>; 当只给一个值时表示 行列间距都为此值
+    
+    //grid-auto-flow属性设置项目的排列顺序 可取值 row(先行后列)、columns(先列后行)、row dense(先行后列并尽可能的不出现空格)、column dense(先列后行并尽可能的不出现空格)
+    
+    //justify-item属性设置单元格内容的水平位置（左中右），align-item属性设置单元格内容的垂直位置（上中下）
+    //两个属性的取值完全相同 start（对齐单元格的起始边缘），end（对齐单元格的结束边缘），center（单元格内部居中），stretch(拉伸，占满单元格的整个宽度，默认值)
+    //place-items属性是两个合并缩写 place-items:<align-item> <justify-item>; 当第二个值省略 则默认等于第一个值
+
+      //上下两者易混淆，注意区分！！！！
+
+    //justify-content属性设置整个内容区域在容器的水平位置（左中右），align-content属性设置整个内容区域在容器的垂直位置（上中下）
+    //两个属性的取值完全相同 start(对齐容器的起始边缘)，end(对齐容器的结束边缘)，center(容器内部居中)，stretch(项目没有指定大小时，拉伸占据整个网格容器)
+    //，space-around（每个项目两侧的间隔相等），space-between(项目与项目的间距相等，项目与容器框之间没有间隔)，space-evenly(项目与项目的间隔相等，项目与容器的间隔也相等)
+    //place-content 是两者合并简写 place-content:<align-content> <justify-content>;当第二个值省略 则默认等于第一个值
+    
+
+
+
+
     .item {
       &.div1 {
         background-color: coral;
