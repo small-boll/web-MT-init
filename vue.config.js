@@ -16,10 +16,17 @@ module.exports = {
         target: "http://172.16.7.144:3001/",
         ws: true,
         pathRewrite: {
-          "^/api": "/mthanos-nest/v1.0/",
-        },
+          "^/api": "/mthanos-nest/v1.0/"
+        }
       },
-    },
+      "/map-api": {
+        target: "http://172.16.7.139:6080/",
+        ws: true,
+        pathRewrite: {
+          "^/map-api": ""
+        }
+      }
+    }
   },
   chainWebpack(config) {
     const svgRule = config.module.rule("svg"); // 找到svg-loader
@@ -30,7 +37,7 @@ module.exports = {
       .use("svg-sprite-loader")
       .loader("svg-sprite-loader")
       .options({
-        symbolId: "icon-[name]",
+        symbolId: "icon-[name]"
       });
 
     // 修改images loader 添加svg处理
@@ -40,16 +47,15 @@ module.exports = {
   },
   configureWebpack: config => {
     config.module.rules.push({
-        test: /\.md$/,
-        use: [
-          {
-            loader: 'vue-loader',
-          },
-          {
-            loader: require.resolve('./markdown-loader'),
-          },
-        ],
-      },
-    );
-  },
+      test: /\.md$/,
+      use: [
+        {
+          loader: "vue-loader"
+        },
+        {
+          loader: require.resolve("./markdown-loader")
+        }
+      ]
+    });
+  }
 };

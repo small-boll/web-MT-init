@@ -68,6 +68,13 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/cssStep/CssStep.vue"], resolve),
     },
+    {
+      path: "/MapIndex1",
+      name: "MapIndex1",
+      meta: { title: "MapIndex1" },
+      component: (resolve: any) =>
+        require(["@/components/map/MapIndex1.vue"], resolve),
+    },
     
   ],
 });

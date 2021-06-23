@@ -1,0 +1,139 @@
+{
+    "currentVersion": 10.5,
+    "serviceDescription": "",
+    "mapName": "Layers",
+    "description": "",
+    "copyrightText": "",
+    "supportsDynamicLayers": true,
+    "layers": [
+        {
+            "id": 0,
+            "name": "whquyu",
+            "parentLayerId": -1,
+            "defaultVisibility": true,
+            "subLayerIds": null,
+            "minScale": 0,
+            "maxScale": 0
+        }
+    ],
+    "tables": [],
+    "spatialReference": {
+        "wkid": 4490,
+        "latestWkid": 4490
+    },
+    "singleFusedMapCache": true,
+    "tileInfo": {
+        "rows": 256,
+        "cols": 256,
+        "dpi": 96,
+        "format": "PNG",
+        "compressionQuality": 0,
+        "origin": {
+            "x": -400,
+            "y": 399.9999999999998
+        },
+        "spatialReference": {
+            "wkid": 4490,
+            "latestWkid": 4490
+        },
+        "lods": [
+            {
+                "level": 0,
+                "resolution": 0.0027465820315218724,
+                "scale": 1154287.473
+            },
+            {
+                "level": 1,
+                "resolution": 0.0013732910155229902,
+                "scale": 577143.7364
+            },
+            {
+                "level": 2,
+                "resolution": 0.0006866455077614951,
+                "scale": 288571.8682
+            },
+            {
+                "level": 3,
+                "resolution": 0.00034332275388074756,
+                "scale": 144285.9341
+            },
+            {
+                "level": 4,
+                "resolution": 0.00017166137696416836,
+                "scale": 72142.96706
+            },
+            {
+                "level": 5,
+                "resolution": 0.00008583068848208418,
+                "scale": 36071.48353
+            },
+            {
+                "level": 6,
+                "resolution": 0.000042915344229144793,
+                "scale": 18035.74176
+            },
+            {
+                "level": 7,
+                "resolution": 0.000021457672119331316,
+                "scale": 9017.870882
+            },
+            {
+                "level": 8,
+                "resolution": 0.000010728836059665658,
+                "scale": 4508.935441
+            },
+            {
+                "level": 9,
+                "resolution": 0.000005364418028643099,
+                "scale": 2254.46772
+            },
+            {
+                "level": 10,
+                "resolution": 0.0000026822090143215496,
+                "scale": 1127.23386
+            }
+        ]
+    },
+    "initialExtent": {
+        "xmin": 112.92459633723522,
+        "ymin": 30.697304074846,
+        "xmax": 115.84857434376491,
+        "ymax": 31.430261856250038,
+        "spatialReference": {
+            "wkid": 4490,
+            "latestWkid": 4490
+        }
+    },
+    "fullExtent": {
+        "xmin": 113.69637983300004,
+        "ymin": 29.971009546000175,
+        "xmax": 115.07679084800009,
+        "ymax": 31.360773651000045,
+        "spatialReference": {
+            "wkid": 4490,
+            "latestWkid": 4490
+        }
+    },
+    "minScale": 1154287.473,
+    "maxScale": 1127.23386,
+    "units": "esriDecimalDegrees",
+    "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+    "documentInfo": {
+        "Title": "",
+        "Author": "",
+        "Comments": "",
+        "Subject": "",
+        "Category": "",
+        "AntialiasingMode": "None",
+        "TextAntialiasingMode": "Force",
+        "Keywords": ""
+    },
+    "capabilities": "Map,Query,Data",
+    "supportedQueryFormats": "JSON, AMF, geoJSON",
+    "exportTilesAllowed": false,
+    "supportsDatumTransformation": true,
+    "maxRecordCount": 1000,
+    "maxImageHeight": 4096,
+    "maxImageWidth": 4096,
+    "supportedExtensions": "KmlServer"
+}

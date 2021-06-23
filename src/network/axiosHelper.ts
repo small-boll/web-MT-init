@@ -24,7 +24,7 @@ const CancelToken = axios.CancelToken;
 
 /**axios默认设置 */
 axios.defaults = {
-  timeout: 30000, //默认超时时间30s
+  timeout: 30000 //默认超时时间30s
 };
 
 let errorArray: Array<any> = [0, 404, 405, 200, 400];
@@ -32,6 +32,11 @@ let errorArray: Array<any> = [0, 404, 405, 200, 400];
 /**请求拦截器 */
 axios.interceptors.request.use(
   (request: any) => {
+    request.headers["Content-Type"] = "application/json;charset=UTF-8";
+    request.headers["Authorization"] = `Basic c2FiZXI6c2FiZXJfc2VjcmV0`;
+    request.headers["Blade-Auth"] =
+      "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ0ZW5hbnRfaWQiOiI4ODc3NDYiLCJyb2xlX25hbWUiOiJhZG1pbiIsInBvc3RfaWQiOiIxMzk1MTk0Njc2OTYxMDU4ODE3IiwidXNlcl9pZCI6IjEyOTU4OTE4OTg0NTMwMDgzODUiLCJyb2xlX2lkIjoiMTM5NTE5NTA3NTIxODYxMjIyNSIsInVzZXJfbmFtZSI6ImFkbWluIiwibmlja19uYW1lIjoiYWRtaW4iLCJkZXRhaWwiOnsidHlwZSI6IndlYiJ9LCJ0b2tlbl90eXBlIjoiYWNjZXNzX3Rva2VuIiwiZGVwdF9pZCI6IjEzOTUxOTE1OTA4MzgzMTI5NjAiLCJhY2NvdW50IjoiYWRtaW4iLCJjbGllbnRfaWQiOiJzYWJlciIsImV4cCI6MTYyNDYxMjcyMSwibmJmIjoxNjIzODkyNzIxfQ.Pere6nC2aQ_uKo_aH7zxZ2pXYhkgvE2mlpOgD8v0Mru98AIvnpQOSo7DiWdTwyUTj3ZKNUeFhmZky9vvHiwSLg";
+    request.headers["Tenant-Id"] = "887746";
     //设置FormData数据的请求头headers
     if (request.params instanceof FormData)
       request.headers["Content-Type"] = "multipart/form-data";
@@ -65,7 +70,6 @@ axios.interceptors.request.use(
     //YnVzaW5lc3N3ZWI6YnVzaW5lc3N3ZWJfc2VjcmV0
     //${Base64.encode( "saber:saber_secret")}
     //request.headers["Authorization"] = `Basic ${Base64.encode("saber:saber_secret")}`;
-    //request.headers["Authorization"] =`Basic YnVzaW5lc3N3ZWI6YnVzaW5lc3N3ZWJfc2VjcmV0`;
 
     //携带token设置
     if (!!store.state.token) {
@@ -132,7 +136,7 @@ axios.interceptors.response.use(
           //跳转到登录页
           window.location.href = "/";
         })
-        .catch(() => { });
+        .catch(() => {});
     } else if (
       errorArray.includes(state) ||
       typeof state == "string" ||
@@ -217,7 +221,7 @@ axios.interceptors.response.use(
       //处理因后台无法统一业务验证提示以错误方式抛出的消息统一拦截处理  2020-04-08 by lavender
       let errResData = err.response.data;
       if (
-        Object.getOwnPropertyNames(errResData).find((item) => {
+        Object.getOwnPropertyNames(errResData).find(item => {
           return item == "msg";
         })
       ) {
@@ -240,7 +244,7 @@ axios.interceptors.response.use(
             //跳转到登录页
             window.location.href = "/";
           })
-          .catch(() => { });
+          .catch(() => {});
       }
     } else if (err.status != "canceled") {
       //非重复提交时抛出错误
@@ -277,11 +281,9 @@ export const httpAsync = (
     url = "/authority/captcha";
     return fixNetwork.getMock(url);
   } else {
-
     if (!!baseUrl) {
       baseUrl = MTConfig.Instance()[baseUrl];
     }
-
 
     //显示loading区域设置
     //HOME页交通路况 不显示loading
@@ -315,7 +317,7 @@ export const httpAsync = (
         params: getParams, //get参数
         data: postParams, //post参数
         headers: headers,
-        cancelToken: new CancelToken((c: any) => (cancel = c)), //取消请求函数创建
+        cancelToken: new CancelToken((c: any) => (cancel = c)) //取消请求函数创建
       })
         .then((res: any) => resolve(res.data))
         .catch((err: any) => reject(err));
@@ -327,7 +329,7 @@ export const httpAsync = (
  * 判断输入地址用于处理返回特殊数据格式
  * @param response
  */
-const checkUrl = function (response: any) {
+const checkUrl = function(response: any) {
   let url = response.config.url;
   if (url.indexOf("/oauth/captcha") >= 0) {
     return true;
@@ -339,7 +341,7 @@ const checkUrl = function (response: any) {
  * 拆分json  参数为 query
  * @param query
  */
-const getQuery = function (query: any) {
+const getQuery = function(query: any) {
   if (query == null || query == "") {
     return "";
   }
