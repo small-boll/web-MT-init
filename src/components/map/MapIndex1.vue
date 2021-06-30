@@ -190,7 +190,7 @@ export default class MapIndex1 extends Vue {
 </script>
 
 <style lang="scss">
-.MapIndex-template {
+.MapIndex1-template {
   height: 100%;
   width: 100%;
   margin: auto;

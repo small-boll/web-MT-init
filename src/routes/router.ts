@@ -75,6 +75,13 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/map/MapIndex1.vue"], resolve),
     },
+    {
+      path: "/MapIndex2",
+      name: "MapIndex2",
+      meta: { title: "MapIndex2" },
+      component: (resolve: any) =>
+        require(["@/components/map/MapIndex2.vue"], resolve),
+    },
     
   ],
 });
