@@ -61,6 +61,14 @@ export default class GridLayout extends Vue {
     //grid-row-gap属性设置行间距，grid-columns-gap属性设置列间距 
     //grid-gap 是两者合并简写形式 grid-gap:<grid-row-gap> <grid-columns-gap>; 当只给一个值时表示 行列间距都为此值
     
+    //grid-template-areas属性 网格布局允许指定区域（area），一个区域由多个单元格组成，grid-template-areas用于定于区域
+    //display:grid;
+    //grid-template-columns:100px 100px 100px;
+    //grid-template-row:100px 100px 100px;
+    //grid-template-areas:'a b c'
+    //                    'd e f'
+    //                    'g h i';            
+
     //grid-auto-flow属性设置项目的排列顺序 可取值 row(先行后列)、columns(先列后行)、row dense(先行后列并尽可能的不出现空格)、column dense(先列后行并尽可能的不出现空格)
     
     //justify-item属性设置单元格内容的水平位置（左中右），align-item属性设置单元格内容的垂直位置（上中下）
@@ -74,8 +82,19 @@ export default class GridLayout extends Vue {
     //，space-around（每个项目两侧的间隔相等），space-between(项目与项目的间距相等，项目与容器框之间没有间隔)，space-evenly(项目与项目的间隔相等，项目与容器的间隔也相等)
     //place-content 是两者合并简写 place-content:<align-content> <justify-content>;当第二个值省略 则默认等于第一个值
     
+    //grid-column-start,grid-column-end,grid-row-start,grid-row-end，四个属性结合使用指定项目的位置，
+    //grid-column-start:左边框所在的垂直网格线（可取值1,2,3,4...还可在n前使用span关键字 表示跨越跨越多少个网格 类似于合并单元格）
+    //grid-column-end:右侧所在的垂直网格线（可取值1,2,3,4...还可在n前使用span关键字 表示跨越跨越多少个网格 类似于合并单元格）
+    //grid-row-start：上边框所在的水平网格线（可取值1,2,3,4...还可在n前使用span关键字 表示跨越跨越多少个网格 类似于合并单元格）
+    //grid-row-end:下边框所在的水平网格线（可取值1,2,3,4...还可在n前使用span关键字 表示跨越跨越多少个网格 类似于合并单元格）
+    //使用这四个属性 当产生项目的重叠，则可使用z-index属性指定项目的重叠顺序
 
+    //grid-area属性指定项目放在哪一个区域
 
+    //justify-self属性设置单元内容的水平位置（左中右），只作用于单个项目 start end center stretch
+    //align-self属性设置单元格内容的垂直位置（上中下），只作用于单个项目 start end center stretch
+    //place-self属性是align-self属性和justify-self属性的合并简写形式。
+    //place-self:<align-slef> <justify-self>
 
 
     .item {
