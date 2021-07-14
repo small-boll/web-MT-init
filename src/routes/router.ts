@@ -66,7 +66,7 @@ let router = new Router({
       name: "CssStep",
       meta: { title: "CssStep" },
       component: (resolve: any) =>
-        require(["@/components/cssStep/CssStep.vue"], resolve),
+        require(["@/components/css/CssStep.vue"], resolve),
     },
     {
       path: "/MapIndex1",
@@ -87,7 +87,7 @@ let router = new Router({
       name: "CssCounter",
       meta: { title: "CssCounter" },
       component: (resolve: any) =>
-        require(["@/components/cssCounter/CssCounter.vue"], resolve),
+        require(["@/components/css/CssCounter.vue"], resolve),
     },
     
   ],
