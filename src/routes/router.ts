@@ -82,6 +82,13 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/map/MapIndex2.vue"], resolve),
     },
+    {
+      path: "/CssCounter",
+      name: "CssCounter",
+      meta: { title: "CssCounter" },
+      component: (resolve: any) =>
+        require(["@/components/cssCounter/CssCounter.vue"], resolve),
+    },
     
   ],
 });
