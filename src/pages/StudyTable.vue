@@ -5,6 +5,8 @@
     <el-button @click="goStudy('/GridLayout')">查看3D动画</el-button>
     <el-button @click="goStudy('/CssStep')">css步骤条</el-button>
     <el-button @click="goStudy('/CssCounter')">css计数器</el-button>
+    <el-button @click="goStudy('/GExample1')">网格布局1</el-button>
+    <el-button @click="goStudy('/ClipPath')">裁减</el-button>
     <router-view></router-view>
   </div>
 </template>

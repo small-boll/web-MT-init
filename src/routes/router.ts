@@ -89,7 +89,20 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/css/CssCounter.vue"], resolve),
     },
-    
+    {
+      path: "/GExample1",
+      name: "GExample1",
+      meta: { title: "GExample1" },
+      component: (resolve: any) =>
+        require(["@/components/gridLayout/gridExample/GExample1.vue"], resolve),
+    },
+    {
+      path: "/ClipPath",
+      name: "ClipPath",
+      meta: { title: "ClipPath" },
+      component: (resolve: any) =>
+        require(["@/components/gridLayout/gridExample/ClipPath.vue"], resolve),
+    },
   ],
 });
 
