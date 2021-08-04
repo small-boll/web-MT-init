@@ -39,13 +39,6 @@ export default class ClipPath extends Vue {}
     // filter滤镜 grayscale灰色滤镜 取值[0,1]之间
     filter: grayscale(0.9);
     cursor: pointer;
-    &:hover {
-      filter: none;
-      & > .text {
-        // 透明度，可控制某元素 显示隐藏
-        opacity: 1;
-      }
-    }
     .text {
       position: absolute;
       background: raba(200, 0, 0, 0.5);
@@ -56,6 +49,14 @@ export default class ClipPath extends Vue {}
       text-align: center;
       color: white;
       font-size: 1.4em;
+      transition: .5s opacity;
+    }
+    &:hover {
+      filter: none;
+      & > .text {
+        // 透明度，可控制某元素 显示隐藏
+        opacity: 1;
+      }
     }
   }
   .left .text {
