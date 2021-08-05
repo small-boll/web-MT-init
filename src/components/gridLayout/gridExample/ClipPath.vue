@@ -1,3 +1,4 @@
+<!-- clip-path裁减 例子 -->
 <template>
   <div class="ClipPath-template">
     <h1>Images clipped with <code>clip-path</code>Property</h1>
