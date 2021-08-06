@@ -103,6 +103,13 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/gridLayout/gridExample/ClipPath.vue"], resolve),
     },
+    {
+      path: "/GridAndClipPath",
+      name: "GridAndClipPath",
+      meta: { title: "GridAndClipPath" },
+      component: (resolve: any) =>
+        require(["@/components/gridLayout/gridExample/GridAndClipPath.vue"], resolve),
+    },
   ],
 });
 
