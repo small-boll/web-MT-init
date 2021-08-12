@@ -110,6 +110,14 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/gridLayout/gridExample/GridAndClipPath.vue"], resolve),
     },
+    {
+      path: "/MultipleColumnLayot",
+      name: "MultipleColumnLayot",
+      meta: { title: "MultipleColumnLayot" },
+      component: (resolve: any) =>
+        require(["@/components/multipleColumnLayot/MultipleColumnLayot.vue"], resolve),
+    },
+    
   ],
 });
 

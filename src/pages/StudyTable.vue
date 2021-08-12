@@ -8,6 +8,7 @@
     <el-button @click="goStudy('/GExample1')">网格布局1</el-button>
     <el-button @click="goStudy('/ClipPath')">裁减</el-button>
     <el-button @click="goStudy('/GridAndClipPath')">多图片不规则拼接</el-button>
+    <el-button @click="goStudy('/MultipleColumnLayot')">分栏</el-button>
     <router-view></router-view>
   </div>
 </template>
