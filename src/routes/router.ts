@@ -117,6 +117,13 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/multipleColumnLayot/MultipleColumnLayot.vue"], resolve),
     },
+    {
+      path: "/CssResize",
+      name: "CssResize",
+      meta: { title: "CssResize" },
+      component: (resolve: any) =>
+        require(["@/components/css/CssResize.vue"], resolve),
+    },
     
   ],
 });
