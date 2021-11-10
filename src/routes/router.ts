@@ -124,6 +124,13 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/css/CssResize.vue"], resolve),
     },
+    {
+      path: "/AnimationSvg",
+      name: "AnimationSvg",
+      meta: { title: "AnimationSvg" },
+      component: (resolve: any) =>
+        require(["@/components/css/animationSvg/AnimationSvgIndex.vue"], resolve),
+    },
     
   ],
 });

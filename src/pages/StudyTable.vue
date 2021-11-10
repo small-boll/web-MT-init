@@ -10,6 +10,7 @@
     <el-button @click="goStudy('/GridAndClipPath')">多图片不规则拼接</el-button>
     <el-button @click="goStudy('/MultipleColumnLayot')">分栏</el-button>
     <el-button @click="goStudy('/CssResize')">宽度拖拽</el-button>
+    <el-button @click="goStudy('/AnimationSvg')">宽度拖拽</el-button>
     <router-view></router-view>
   </div>
 </template>
