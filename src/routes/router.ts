@@ -131,6 +131,13 @@ let router = new Router({
       component: (resolve: any) =>
         require(["@/components/css/animationSvg/AnimationSvgIndex.vue"], resolve),
     },
+    {
+      path: "/CssCustomStyle",
+      name: "CssCustomStyle",
+      meta: { title: "CssCustomStyle" },
+      component: (resolve: any) =>
+        require(["@/components/css/CssCustomStyle.vue"], resolve),
+    },
     
   ],
 });
